@@ -1,0 +1,9 @@
+#This program contains a while loop
+fun main()
+{
+	a = 10; #initialize counter
+	while (a > 0 ) {
+		write("Hello world");
+		a = a-1; #decrement the counter
+	}
+}

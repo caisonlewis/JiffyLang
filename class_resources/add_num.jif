@@ -1,0 +1,18 @@
+fun main()
+{
+	prompt = "Enter the first integer: ";
+	a = getNum(prompt);
+	
+	prompt = "Enter the second integer: ";
+	
+	b = getNum(prompt);
+	
+	write(a+b);
+}
+
+fun getNum(prompt) {
+
+	write(prompt);
+	read(response);
+	return response;
+}

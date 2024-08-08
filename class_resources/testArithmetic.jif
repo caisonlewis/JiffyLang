@@ -1,0 +1,10 @@
+fun main() {
+
+write(3+2);
+write(3+2*8);
+write(3+8%3);
+write((3+2)*(4+3));
+write(2^3^2);
+write(2+1$4-2);
+
+}

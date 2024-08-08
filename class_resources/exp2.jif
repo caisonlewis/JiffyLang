@@ -1,0 +1,6 @@
+#My Jiffy program
+#Here is a comment with a bunch of #######
+fun main()
+	{ # start of program
+	b=2+3*4 #an expression
+	} # end of program

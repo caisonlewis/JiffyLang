@@ -1,0 +1,38 @@
+# (10 points)
+fun seq_sum(n) {
+	#Use a while loop to calculate and return the sum 1+2+3+4+...+n
+	result = 0;
+	i = 1;
+	
+	while (i < n){
+		result = result + i;
+		i = i+1;
+	}
+    result = result + n;
+    return result;
+}
+ 
+## MAKE NO CHANGES BELOW
+## MAKE NO CHANGES BELOW
+## MAKE NO CHANGES BELOW
+## MAKE NO CHANGES BELOW
+fun test(test_num, test_answer) {
+	
+	test_result = seq_sum(test_num);
+    if (test_result ? test_answer ) {
+    	return("seq_sum: Test passed");
+    }
+    else {
+    	return("seq_sum: Test failed");
+    }
+}
+
+fun main() 
+{
+	x = test(10, 55);
+	write(x);
+	x = test(12, 78);
+	write(x);
+	x = test(100, 5050);
+	write(x);
+}

@@ -1,0 +1,6 @@
+#Jiffy program to evaluate and print 2+3*4
+fun main()
+{ # start of program
+write("Test 2. 2+3*4 should be 14"); 
+write(2+3*4);
+} # end of program

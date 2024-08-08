@@ -1,0 +1,19 @@
+fun main()
+{
+	prompt = "Enter a num: ";
+	num = getNum(prompt);
+	expected = 12;
+	if (num ? expected){
+	
+	write("Hello ");
+	write(num);
+	} else {
+		write("not num");
+	}
+}
+
+fun getName(prompt) {
+	write(prompt);
+	read(response);
+	return response;
+}

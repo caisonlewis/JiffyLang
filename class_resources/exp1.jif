@@ -1,0 +1,5 @@
+#My Jiffy program
+fun main()
+{ # start of program
+a = 2+3 #an expression
+} # end of program

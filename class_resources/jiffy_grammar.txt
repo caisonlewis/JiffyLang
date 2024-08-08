@@ -1,0 +1,56 @@
+####################################################################
+# This is the grammar for the phrase structure                     #
+# of the Jiffy programming language                                #
+#                                                                  #
+# Anything within angle brackets is a  <non-terminal>              #
+# Anything not enclosed in angle brackets is a terminal symbol,    # 
+# i.e. literally that symbol                                       #
+# For example, fun, if, (, { etc.                                  #
+####################################################################
+
+<program> ::= <func_declarations>
+
+<func_declarations> ::= <func_decl> 
+		                | <func_decl> <func_declarations>
+	
+<func_decl> ::= fun <identifier> () <block> 
+                | fun <identifier> ( <formal_arguments> ) <block>
+
+<formal_arguments> ::= <identifier> | <identifier> , <formal_arguments>  
+
+<block> ::= { <statement_list> }
+
+<statement_list> ::= <statement> | <statement> ; <statement_list>
+
+<statement> ::= <assignment_statement> 
+                | <write_statement> | <read_statement>
+                | <if_statement> | <while_statement>
+                | <return_statement>
+                | <block> | <empty>
+                
+<assignment_statement> ::= <identifier> = <exp>
+
+<write_statement> ::= write ( <exp> )
+
+<read_statement> ::= read ( <identifier> )
+
+<return_statement> ::= return <exp>
+
+<while_statement> ::= while ( <bool_exp> ) <block>
+
+<if_statement> ::= if (<bool_exp>) <block> else <block> | if (<bool_exp>) <block>
+
+<bool_exp> ::= <exp> > <exp> | <exp> < <exp> | <exp> ? <exp>
+
+<exp> ::= <exp> $ <addexp> | <addexp>
+
+<addexp> ::= <addexp> + <mulexp> | <mulexp>
+
+<mulexp> ::= <mulexp> * <powexp> | <mulexp> / <powexp> | <powexp>
+
+<powexp> ::= <rootexp> ^ <powexp> | <rootexp>
+
+<rootexp> ::= ( <exp> ) | <number> | <identifier> | <string_literal> 
+              | <identifier> ( ) | <identifier> ( <actual_arguments> )
+
+<actual_arguments> ::= <exp> | <exp> , <actual_arguments>

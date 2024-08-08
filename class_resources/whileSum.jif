@@ -1,0 +1,13 @@
+fun main() 
+{
+    a = 10;
+    total = 0;
+    
+    while (a > 0) {
+        total = total + a;
+        a = a - 1;
+    }
+    
+    write("Test 0. Value shown below must be 55");
+    write(total);
+}

@@ -1,0 +1,11 @@
+fun change() {
+	x = 100;
+	write("IN change, x = " + x);
+}
+
+fun main() {
+	x = 1;
+	write("In main, BEFORE call to change, x = " + x);
+	z = change();
+	write("In main, AFTER call to change, x = " + x);
+}

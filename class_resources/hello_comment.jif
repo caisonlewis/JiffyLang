@@ -1,0 +1,5 @@
+#My first Jiffy program
+fun main()
+{ # start of program
+	write("Hello world"); #show this message
+} # end of program

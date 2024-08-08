@@ -1,0 +1,7 @@
+#My Jiffy program
+#I love comments
+fun main()
+{ # start of program
+c=(2+3)*4 #an expression # did I say expression?
+} # end of program
+#No more comments

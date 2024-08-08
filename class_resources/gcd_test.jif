@@ -1,0 +1,50 @@
+# (15 points)
+fun gcd(num1, num2) {
+	#Return the gcd (greatest common divisor) of num1 and num2
+	#For example, the gcd of 24 and 36 is 12 because 
+	#12 is the biggest number that divides 24 and 36
+	#If needed, write other helper functions
+
+	while (num2 > 0) {
+	
+		temp = num1;
+		num1 = num2;
+		num2 = temp % num2;
+		# Iterative Euclidean algorithm 
+	}
+	
+    
+    return num1;
+}
+
+	
+
+ 
+## MAKE NO CHANGES BELOW
+## MAKE NO CHANGES BELOW
+## MAKE NO CHANGES BELOW
+## MAKE NO CHANGES BELOW
+fun test(test_num1, test_num2, test_answer) {
+	
+	test_result = gcd(test_num1, test_num2);
+    if (test_result ? test_answer ) {
+    	return("gcd: Test passed");
+    }
+    else {
+    	return("gcd: Test failed");
+    }
+}
+
+fun main() 
+{
+	main_x = test(60, 8000, 20);
+	write(main_x);
+	main_x = test(24, 36, 12);
+	write(main_x);
+	main_x = test(77, 14, 7);
+	write(main_x);
+	main_x = test(54, 24, 6);
+	write(main_x);
+	main_x = test(771, 131, 1);
+	write(main_x);
+}

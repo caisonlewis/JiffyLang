@@ -1,0 +1,16 @@
+fun fact(a) {
+	write("Calculating fact("+a+")");
+	
+	if (a < 1 ) { 
+		return 1;
+	}
+	else {
+		return a*fact(a-1);
+	}
+}
+
+fun main() {
+	write("Enter a number: ");
+	read(a);
+	write("Factorial "+a+" = "+ fact(a));
+}

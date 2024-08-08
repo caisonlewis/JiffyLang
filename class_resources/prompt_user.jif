@@ -1,0 +1,14 @@
+fun getNumber(prompt) 
+{
+	write(prompt);
+	read(response);
+	return response
+}
+	
+fun main()
+{
+	message = "Enter a number: ";
+	x = getNumber(message);
+	write("You entered: ");
+	write(x);
+}

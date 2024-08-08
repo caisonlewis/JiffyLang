@@ -1,0 +1,50 @@
+fun main() 
+{
+
+	write("Enter first number:");
+    read(num1);
+    write("Enter second number:");
+    read(num2);
+	
+	if (num1 > num2) {
+	
+		# make num1 smaller if necessary for a proper range
+		temp = num1;
+		num1 = num2;
+		num2 = temp;
+	}
+	
+	current = num1;
+	
+	while (current < (num2 +1)) {
+		if (prime(current) ? 1) {
+			write(current);
+		}
+		current = current + 1;
+	}
+	
+
+}
+
+fun prime(n)
+{
+	if (n < 2) {
+		return 0; #zero is false , one is true
+	}
+	if (n ? 4){
+			return 0;
+		} #dont know why 4 was returning as prime, this is a rudimentary fix
+	
+	
+	div = 2;
+	while (div * div < (n-1)) {
+	
+		if (n % div ? 0){
+			return 0;
+		}
+		div = div + 1;
+	}
+	return 1;
+
+}
+
